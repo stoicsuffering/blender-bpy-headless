@@ -236,10 +236,7 @@ void pyrna_struct_type_extend_capi(struct StructRNA *srna,
                                    struct PyMethodDef *py_method,
                                    struct PyGetSetDef *py_getset);
 
-/* Called before stopping Python. */
-
 void pyrna_alloc_types(void);
-void pyrna_free_types(void);
 
 /* Primitive type conversion. */
 
