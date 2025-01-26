@@ -667,9 +667,9 @@ if(NOT APPLE AND NOT (WIN32 AND CMAKE_SYSTEM_PROCESSOR STREQUAL "ARM64"))
   option(WITH_CYCLES_DEVICE_OPTIX "Enable Cycles NVIDIA OptiX support" ON)
   mark_as_advanced(WITH_CYCLES_DEVICE_CUDA)
 
-  option(WITH_CYCLES_CUDA_BINARIES "Build Cycles NVIDIA CUDA binaries" OFF)
+  option(WITH_CYCLES_CUDA_BINARIES "Build Cycles NVIDIA CUDA binaries" ON)
   set(CYCLES_CUDA_BINARIES_ARCH
-    sm_30 sm_35 sm_37 sm_50 sm_52 sm_60 sm_61 sm_70 sm_75 sm_86 sm_89 compute_75
+    sm_30 sm_35 sm_37 sm_50 sm_52 sm_60 sm_61 sm_70 sm_75 sm_86 sm_89 sm_90 compute_75 compute_86 compute_89 compute_90
     CACHE STRING "CUDA architectures to build binaries for"
   )
   option(WITH_CYCLES_CUDA_BUILD_SERIAL "\
@@ -694,6 +694,9 @@ When set, this path will be used at runtime to compile OptiX kernels."
   mark_as_advanced(WITH_CUDA_DYNLOAD)
   mark_as_advanced(OPTIX_ROOT_DIR)
   mark_as_advanced(CYCLES_RUNTIME_OPTIX_ROOT_DIR)
+
+else()
+  message( FATAL_ERROR "I'll only ever be building this on linux amd64, adding an assertion here in case I forget to use the right platform in docker." )
 endif()
 
 # AMD HIP
