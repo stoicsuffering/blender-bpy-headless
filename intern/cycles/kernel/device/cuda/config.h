@@ -73,6 +73,17 @@
 #  define GPU_KERNEL_BLOCK_NUM_THREADS 512
 #  define GPU_KERNEL_MAX_REGISTERS 96
 
+/* 9.x */
+#elif __CUDA_ARCH__ <= 900
+#  define GPU_MULTIPRESSOR_MAX_REGISTERS 65536
+#  define GPU_MULTIPROCESSOR_MAX_BLOCKS 32
+#  define GPU_BLOCK_MAX_THREADS 1024
+#  define GPU_THREAD_MAX_REGISTERS 255
+
+/* tunable parameters */
+#  define GPU_KERNEL_BLOCK_NUM_THREADS 512
+#  define GPU_KERNEL_MAX_REGISTERS 96
+
 /* unknown architecture */
 #else
 #  error "Unknown or unsupported CUDA architecture, can't determine launch bounds"
