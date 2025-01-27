@@ -5,7 +5,7 @@
 ````cmd
 docker pull nvidia/cuda:12.4.1-devel-ubuntu22.04
 
-docker run -it nvidia/cuda:12.4.1-devel-ubuntu22.04
+docker run --platform linux/amd64 -it nvidia/cuda:12.4.1-devel-ubuntu22.04
 ````
 
 ### Set up container with dependencies
