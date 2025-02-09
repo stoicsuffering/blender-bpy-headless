@@ -9,7 +9,7 @@
 #
 
 set(WITH_ALEMBIC             ON  CACHE BOOL "" FORCE)
-set(WITH_AUDASPACE           ON  CACHE BOOL "" FORCE)
+set(WITH_AUDASPACE           OFF  CACHE BOOL "" FORCE)
 set(WITH_BUILDINFO           ON  CACHE BOOL "" FORCE)
 set(WITH_BULLET              ON  CACHE BOOL "" FORCE)
 set(WITH_CODEC_FFMPEG        ON  CACHE BOOL "" FORCE)
