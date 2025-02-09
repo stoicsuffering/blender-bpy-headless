@@ -88,3 +88,12 @@ endif()
 # Language Support.
 
 set(WITH_INTERNATIONAL       OFF CACHE BOOL "" FORCE)
+
+# -----------------------------------------------------------------------------
+# Cycles Acceleration & Ahead-Of-Time compilation
+
+set(WITH_CYCLES_DEVICE_OPTIX    ON  CACHE BOOL "" FORCE)
+set(WITH_CYCLES_CUDA_BINARIES   ON  CACHE BOOL "" FORCE)
+set(WITH_CYCLES_HIP_BINARIES    ON  CACHE BOOL "" FORCE)
+set(WITH_CYCLES_DEVICE_ONEAPI   OFF  CACHE BOOL "" FORCE)
+set(WITH_CYCLES_ONEAPI_BINARIES OFF  CACHE BOOL "" FORCE)
