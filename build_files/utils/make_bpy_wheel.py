@@ -226,7 +226,7 @@ def main() -> None:
     setuptools.setup(
         name="bpy",
         version=blender_version_str,
-        install_requires=["cython", "numpy", "requests", "zstandard"],
+        install_requires=["cython", "numpy<2.0", "requests", "zstandard"],
         python_requires="==%d.%d.*" % (python_version_number[0], python_version_number[1]),
         packages=["bpy"],
         package_data={"": package_files("bpy")},
