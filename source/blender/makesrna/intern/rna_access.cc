@@ -65,7 +65,7 @@
 #include "WM_types.hh"
 
 #ifdef WITH_PYTHON
-#  include "BPY_extern.hh"
+#  include "BPY_extern.h"
 #endif
 
 #include "rna_access_internal.hh"
