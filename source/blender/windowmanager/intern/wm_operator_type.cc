@@ -33,7 +33,7 @@
 #include "RNA_prototypes.h"
 
 #ifdef WITH_PYTHON
-#  include "BPY_extern.hh"
+#  include "BPY_extern.h"
 #endif
 
 #include "WM_api.hh"
