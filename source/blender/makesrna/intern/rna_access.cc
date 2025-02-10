@@ -68,7 +68,7 @@
 #  include "BPY_extern.h"
 #endif
 
-#include "rna_access_internal.hh"
+#include "rna_access_internal.h"
 #include "rna_internal.hh"
 
 static CLG_LogRef LOG = {"rna.access"};
